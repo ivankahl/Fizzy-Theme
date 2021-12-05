@@ -756,7 +756,10 @@ table tr td:last-child {border-right: solid 1px #dbdbdb;}
 }
 .post-content tbody tr:nth-child(even){background-color: #f9f9f9;}
 .post-content table tr:hover{
-	background-color:rgba(66, 165, 245, 0.15);
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+	background-size: 10px 10px;
 }
 .post-content table td:first-child {
     background-size: 20px 100%;
