@@ -2,11 +2,11 @@
 
 /* global */
 :root {
-    --main-color: #fb3b3b;
-    --secondary-color:#4472e4;
-    --link-color-hover: #ff7a7a;
+    --main-color: #0085FF;
+    --secondary-color:#ff4d40;
+    --link-color-hover: #0085FF;
     --text-black: #333;
-    --text-dark: #7a0404;
-    --bg-color-light: #fff3f3;
-    --shadow: rgba(238,95,91,0.25);
+    --text-dark: #04417a;
+    --bg-color-light: #f3f5ff;
+    --shadow: rgba(119, 119, 119, 0.25);
   }

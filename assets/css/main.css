@@ -242,6 +242,7 @@ html {
 }
 html,body{
 	overflow-x: hidden;
+	line-height: 1.7 !important;
 }
 /* ====================== header ====================== 2019.04.12 */
 
@@ -502,7 +503,7 @@ html,body{
 .single-article .post-wrap {
     max-width: 760px;
 	padding: 48px 15px;
-	font-size:1.15rem;
+	font-size:1rem;
 	margin: auto!important;
 }
 /* post heading size */
@@ -726,7 +727,9 @@ html,body{
 	box-shadow: 0 1px 1px var(--shadow);
     margin-left: -.5em;
     padding: .75em 1.25em;
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+	font-size: 1rem;
+	line-height: 1.7;
+    font-family: 'Montserrat', -apple-system,	BlinkMacSystemFont,	"PingFang SC",	"Heiti SC", 	"STXihei", 	"Microsoft YaHei",	sans-serif;
 }
 blockquote ul{
 	margin-top:0 !important;
@@ -1170,8 +1173,13 @@ ul.post-archive{margin-left:0!important;line-height:2 !important;}
 .footer{
 	box-shadow: 0 0px 1px 0 #bbb;
 }
+
+.declare, .copyright {
+	font-size: 0.8em;
+}
+
 .declare a {
-	color:#666;
+	color:#7a7a7a;
 	word-break: break-word;
 	transition: all .25s;
     

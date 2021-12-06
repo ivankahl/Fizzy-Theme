@@ -99,14 +99,14 @@
     box-shadow: 0 0px 1px 0 #bbb;
 }
 .has-shadow-mo {
-    box-shadow: 0 20px 40px rgba(12,12,94,.1) !important;
+    box-shadow: 0 20px 40px rgba(92, 92, 92, 0.1) !important;
 }
 
 .has-shadow-lift {
-    box-shadow: 0 3px 6px rgba(12,12,94,.1) !important;
+    box-shadow: 0 3px 6px rgba(94, 94, 94, 0.1) !important;
 }
 .has-shadow-lift:hover {
-    box-shadow: 0 20px 40px rgba(12,12,94,.1) !important;
+    box-shadow: 0 20px 40px rgba(94, 94, 94, 0.1) !important;
 }
 
 /* border */
@@ -131,8 +131,14 @@
 
 /* background */
 .has-background-light-line{
+    
     background-image: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 2px, #eee 2px, #eee 3px);
 }
+
+.has-background-lighter {
+    background-color: #f9f9f9;
+}
+
 .bg-cover-center{
     background-size: cover;
     background-position: center center;

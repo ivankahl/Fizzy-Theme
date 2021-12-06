@@ -23,7 +23,7 @@
                         {{!-- tags --}}
                         {{#tag}}
                         <div class="buttons tags has-text-weight-semibold">
-                            <span class="button is-static is-size-7-mobile">
+                            <span class="is-static is-size-7-mobile" style="padding-bottom: 5px; padding-right: 10px">
                                 {{#has tag="count:1"}}<i class="iconfont icon-tag"></i>{{/has}}
                                 {{#has tag="count:>1"}}<i class="iconfont icon-tags"></i>{{/has}}</span>
                             {{#foreach tags}}
@@ -33,8 +33,8 @@
                         {{/tag}}
 
                         {{!-- content --}}
-                        <div class="content post-content is-size-6-mobile is-georgia">{{content}}</div>
-                        <div class="spacing-1 is-hidden-mobile"></div>
+                        <div class="content post-content is-size-6-mobile is-montserrat">{{content}}</div>
+                        <div class="spacing-4 is-hidden-mobile"></div>
                     </section>
                 </div>
             </article>

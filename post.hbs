@@ -35,7 +35,7 @@
                         {{!-- tags --}}
                         {{#has tag="count:>0"}}
                         <div class="buttons tags has-text-weight-semibold">
-                            <span class="button is-static is-size-7-mobile" style="padding:0 0.5em;min-width:2.5em">
+                            <span class="is-static is-size-7-mobile" style="padding-bottom: 5px; padding-right: 10px">
                                 {{#has tag="count:1"}}<i class="iconfont icon-tag"></i>{{/has}}
                                 {{#has tag="count:>1"}}<i class="iconfont icon-tags"></i>{{/has}}
                             </span>
@@ -46,10 +46,7 @@
                         {{/has}}
 
                         {{!-- content --}}
-                        <div class="content post-content is-size-6-mobile is-georgia">{{content}}</div>
-
-                        {{!-- author box --}}
-                        {{> "post/post_author"}}
+                        <div class="content post-content is-size-6-mobile is-montserrat">{{content}}</div>
                         
                     </section>
                 </div>

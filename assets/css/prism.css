@@ -1,219 +1,275 @@
-/*
- Name  : VSCode Default Dark Plus
- Author: Fuyuno Mikazuki <https://mochizuki.moe>
-
- Original Color by Microsoft Visual Studio Code <https://github.com/microsoft/vscode> and dark-plus-syntax <https://github.com/dunstontc/dark-plus-syntax> 
-*/
-$color-base: #d4d4d4;
-$color-builtin: #4ec9b0;
-$color-class: #d7ba7d;
-$color-comment: #6a9955;
-$color-deleted: #f44747;
-$color-function: #dcdcaa;
-$color-keyword: #569cd6;
-$color-number: #b5cea8;
-$color-operator: #d4d4d4;
-$color-regex: #646695;
-$color-string: #ce9178;
-$color-variable: #9cdcfe;
-
-code[class*="language-"],
-pre[class*="language-"] {
-  font-family: Consolas, "Courier New", Courier, monospace;
-  font-size: 90%;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  line-height: 1.5;
-  color: $color-base;
-  text-align: left;
-  word-break: normal;
-  word-wrap: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  white-space: pre;
-  background-color: #1e1e1e;
-  word-spacing: normal;
+pre[class*="language-"],
+code[class*="language-"] {
+	color: #d4d4d4;
+	font-size: 13px;
+	text-shadow: none;
+	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
-/* code blocks */
-pre[class*="language-"] {
-  padding: 0.5em 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-  border: 0.3em solid $color-base;
-  border-radius: 0.5em;
-}
-
-code[class*="language-"]::-moz-selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::-moz-selection,
-code[class*="language-"] ::selection,
-pre[class*="language-"]::-moz-selection,
 pre[class*="language-"]::selection,
-pre[class*="language-"] ::-moz-selection,
-pre[class*="language-"] ::selection {
-  background-color: #add6ff26;
+code[class*="language-"]::selection,
+pre[class*="language-"] *::selection,
+code[class*="language-"] *::selection {
+	text-shadow: none;
+	background: #264F78;
 }
 
-/* inline code */
+@media print {
+	pre[class*="language-"],
+	code[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	background: #1e1e1e;
+}
+
 :not(pre) > code[class*="language-"] {
-  padding: 0.15em 0.2em 0.05em;
-  white-space: normal;
-  border: 0.13em solid $color-base;
-  border-radius: 0.3em;
+	padding: .1em .3em;
+	border-radius: .3em;
+	color: #db4c69;
+	background: #1e1e1e;
+}
+/*********************************************************
+* Tokens
+*/
+.namespace {
+	opacity: .7;
 }
 
-/* common tokens */
-.token {
-  &.annotation,
-  &.builtin {
-    color: $color-builtin;
-  }
-
-  &.boolean {
-    color: $color-keyword;
-  }
-
-  &.comment,
-  &.doctype {
-    color: $color-comment;
-  }
-
-  &.constant,
-  &.class-name {
-    color: $color-builtin;
-  }
-
-  &.deleted {
-    color: $color-deleted;
-  }
-
-  &.function {
-    color: $color-function;
-  }
-
-  &.keyword {
-    color: $color-keyword;
-  }
-
-  &.macro {
-    &.property {
-      color: $color-keyword;
-    }
-  }
-
-  &.number {
-    color: $color-number;
-  }
-
-  &.operator {
-    color: $color-operator;
-  }
-
-  &.tag {
-    .token {
-      &.attr-name {
-        color: $color-variable;
-      }
-
-      &.attr-value {
-        color: $color-string;
-
-        &.punctuation {
-          color: $color-string;
-        }
-      }
-
-      &.class-name {
-        color: $color-builtin;
-      }
-
-      &.punctuation {
-        color: $color-base;
-        opacity: 0.7;
-      }
-
-      &.tag {
-        color: $color-keyword;
-      }
-    }
-  }
-
-  &.url {
-    /* text-decoration: underline */
-  }
-
-  &.parent {
-    &.important {
-      color: $color-keyword;
-    }
-  }
-
-  &.property {
-    color: $color-variable;
-  }
-
-  &.regex {
-    color: $color-regex;
-  }
-
-  &.rule {
-    color: $color-keyword;
-  }
-
-  &.selector {
-    color: $color-class;
-  }
-
-  &.string {
-    color: $color-string;
-  }
-
-  &.variable {
-    color: $color-variable;
-  }
+.token.doctype .token.doctype-tag {
+	color: #569CD6;
 }
 
-/* JavaScript React, TypeScript React */
-code.language-tsx,
-code.language-jsx,
-pre.language-tsx,
-pre.language-jsx {
-  .token {
-    &.interpolation {
-      .interpolation-punctuation {
-        color: $color-keyword;
-      }
-    }
-
-    &.tag {
-      .token {
-        &.script {
-          .token {
-            &.punctuation {
-              color: $color-keyword;
-            }
-
-            &.script-punctuation {
-              color: $color-base;
-              opacity: 0.7;
-            }
-          }
-        }
-      }
-    }
-  }
+.token.doctype .token.name {
+	color: #9cdcfe;
 }
 
-/* SASS, SCSS */
-code.language-sass,
-code.language-scss {
-  .token {
-    &.property {
-      color: $color-variable;
-    }
-  }
+.token.comment,
+.token.prolog {
+	color: #6a9955;
+}
+
+.token.punctuation,
+.language-html .language-css .token.punctuation,
+.language-html .language-javascript .token.punctuation {
+	color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.inserted,
+.token.unit {
+	color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.deleted {
+	color: #ce9178;
+}
+
+.language-css .token.string.url {
+	text-decoration: underline;
+}
+
+.token.operator,
+.token.entity {
+	color: #d4d4d4;
+}
+
+.token.operator.arrow {
+	color: #569CD6;
+}
+
+.token.atrule {
+	color: #ce9178;
+}
+
+.token.atrule .token.rule {
+	color: #c586c0;
+}
+
+.token.atrule .token.url {
+	color: #9cdcfe;
+}
+
+.token.atrule .token.url .token.function {
+	color: #dcdcaa;
+}
+
+.token.atrule .token.url .token.punctuation {
+	color: #d4d4d4;
+}
+
+.token.keyword {
+	color: #569CD6;
+}
+
+.token.keyword.module,
+.token.keyword.control-flow {
+	color: #c586c0;
+}
+
+.token.function,
+.token.function .token.maybe-class-name {
+	color: #dcdcaa;
+}
+
+.token.regex {
+	color: #d16969;
+}
+
+.token.important {
+	color: #569cd6;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.constant {
+	color: #9cdcfe;
+}
+
+.token.class-name,
+.token.maybe-class-name {
+	color: #4ec9b0;
+}
+
+.token.console {
+	color: #9cdcfe;
+}
+
+.token.parameter {
+	color: #9cdcfe;
+}
+
+.token.interpolation {
+	color: #9cdcfe;
+}
+
+.token.punctuation.interpolation-punctuation {
+	color: #569cd6;
+}
+
+.token.boolean {
+	color: #569cd6;
+}
+
+.token.property,
+.token.variable,
+.token.imports .token.maybe-class-name,
+.token.exports .token.maybe-class-name {
+	color: #9cdcfe;
+}
+
+.token.selector {
+	color: #d7ba7d;
+}
+
+.token.escape {
+	color: #d7ba7d;
+}
+
+.token.tag {
+	color: #569cd6;
+}
+
+.token.tag .token.punctuation {
+	color: #808080;
+}
+
+.token.cdata {
+	color: #808080;
+}
+
+.token.attr-name {
+	color: #9cdcfe;
+}
+
+.token.attr-value,
+.token.attr-value .token.punctuation {
+	color: #ce9178;
+}
+
+.token.attr-value .token.punctuation.attr-equals {
+	color: #d4d4d4;
+}
+
+.token.entity {
+	color: #569cd6;
+}
+
+.token.namespace {
+	color: #4ec9b0;
+}
+/*********************************************************
+* Language Specific
+*/
+
+pre[class*="language-javascript"],
+code[class*="language-javascript"],
+pre[class*="language-jsx"],
+code[class*="language-jsx"],
+pre[class*="language-typescript"],
+code[class*="language-typescript"],
+pre[class*="language-tsx"],
+code[class*="language-tsx"] {
+	color: #9cdcfe;
+}
+
+pre[class*="language-css"],
+code[class*="language-css"] {
+	color: #ce9178;
+}
+
+pre[class*="language-html"],
+code[class*="language-html"] {
+	color: #d4d4d4;
+}
+
+.language-regex .token.anchor {
+	color: #dcdcaa;
+}
+
+.language-html .token.punctuation {
+	color: #808080;
+}
+/*********************************************************
+* Line highlighting
+*/
+pre[class*="language-"] > code[class*="language-"] {
+	position: relative;
+	z-index: 1;
+}
+
+.line-highlight.line-highlight {
+	background: #f7ebc6;
+	box-shadow: inset 5px 0 0 #f7d87c;
+	z-index: 0;
 }
